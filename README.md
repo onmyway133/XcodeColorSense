@@ -4,6 +4,11 @@ An Xcode plugin that makes working with color easier. Inspired by [ColorSense-fo
 
 ![](Screenshots/Banner.png)
 
+Features
+==
+
+![](Screenshots/XcodeColorSense.png)
+
 Licence
 --
 This project is released under the MIT license. See LICENSE.md.
