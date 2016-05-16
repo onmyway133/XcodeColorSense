@@ -80,15 +80,20 @@ class XcodeColorSense: NSObject {
       string = textView.textStorage?.string
     else { return }
 
+    // Text
     let text = string as NSString
     let selectedText = range.length > 0 ? text.substringWithRange(range) : ""
     let line = text.substringWithRange(text.lineRangeForRange(range))
 
+    // Position
     let rectInScreen = textView.firstRectForCharacterRange(range, actualRange: nil)
     let rectInWindow = textView.window?.convertRectFromScreen(rectInScreen) ?? NSZeroRect
-    let rectInTextView = textView.convertRect(rectInWindow, toView: nil)
-    previewView.frame.origin = rectInTextView.origin
+    let rectInTextView = textView.convertRect(rectInWindow, fromView: nil)
 
+    previewView.frame.origin = CGPoint(x: rectInTextView.origin.x,
+                                       y: rectInTextView.origin.y - previewView.frame.size.height * 2)
+
+    // Color
     if Regex.validateHex(selectedText) {
       previewView.color = NSColor.hex(selectedText)
       textView.addSubview(previewView)

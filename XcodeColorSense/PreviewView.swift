@@ -12,6 +12,10 @@ class PreviewView: NSColorWell {
 
   override init(frame frameRect: NSRect) {
     super.init(frame: frameRect)
+
+    bordered = false
+    layer?.borderColor = NSColor.brownColor().CGColor
+    layer?.borderWidth = 1.0
   }
 
   required init?(coder: NSCoder) {
