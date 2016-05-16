@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PreviewView: NSView {
+class PreviewView: NSColorWell {
 
   override init(frame frameRect: NSRect) {
     super.init(frame: frameRect)
@@ -16,17 +16,5 @@ class PreviewView: NSView {
 
   required init?(coder: NSCoder) {
     fatalError()
-  }
-
-  var color: NSColor = .clearColor() {
-    didSet {
-      setNeedsDisplayInRect(bounds)
-    }
-  }
-
-  override func drawRect(dirtyRect: NSRect) {
-    color.setStroke()
-
-    NSBezierPath.strokeRect(NSInsetRect(bounds, 0.5, 0.5))
   }
 }

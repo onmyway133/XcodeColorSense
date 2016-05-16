@@ -14,6 +14,7 @@ class XcodeColorSense: NSObject {
   var bundle: NSBundle
   lazy var center = NSNotificationCenter.defaultCenter()
   var textView: NSTextView?
+  let previewView = PreviewView(frame: CGRect(origin: CGPointZero, size: CGSize(width: 40, height: 60)))
 
   // MARK: - Initialization
 
@@ -79,11 +80,17 @@ class XcodeColorSense: NSObject {
       string = textView.textStorage?.string
     else { return }
 
+    print(range)
     let text = string as NSString
-    let lineRange = text.lineRangeForRange(range)
-    let line = text.substringWithRange(lineRange)
+    let line = text.substringWithRange(text.lineRangeForRange(range))
 
-      
+    let rectInScreen = textView.firstRectForCharacterRange(range, actualRange: nil)
+    let rectInWindow = textView.window?.convertRectFromScreen(rectInScreen) ?? NSZeroRect
+    let rectInTextView = textView.convertRect(rectInWindow, toView: nil)
+    previewView.frame.origin = rectInTextView.origin
+    previewView.color = NSColor.redColor()
+    textView.addSubview(previewView)
+
   }
 }
 
