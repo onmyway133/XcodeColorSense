@@ -4,8 +4,6 @@ An Xcode plugin that makes working with color easier. Inspired by [ColorSense-fo
 
 ![](Screenshots/Banner.png)
 
-Inspi
-
 Licence
 --
 This project is released under the MIT license. See LICENSE.md.
