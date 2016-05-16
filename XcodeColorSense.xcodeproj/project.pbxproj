@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2069BE71CE9B6C70027D12E /* XcodeColorSense.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = D2069BE61CE9B6C70027D12E /* XcodeColorSense.xcscheme */; };
 		D2069BE91CE9B6C70027D12E /* XcodeColorSense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */; };
+		D2069BF11CE9BE270027D12E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2069BF01CE9BE270027D12E /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		D2069BE61CE9B6C70027D12E /* XcodeColorSense.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = XcodeColorSense.xcscheme; path = XcodeColorSense.xcodeproj/xcshareddata/xcschemes/XcodeColorSense.xcscheme; sourceTree = SOURCE_ROOT; };
 		D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeColorSense.swift; sourceTree = "<group>"; };
 		D2069BEA1CE9B6C70027D12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2069BF01CE9BE270027D12E /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -41,6 +43,7 @@
 				D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */,
 				D2069BEA1CE9B6C70027D12E /* Info.plist */,
 				D2069BE51CE9B6C70027D12E /* Supporting Files */,
+				D2069BF01CE9BE270027D12E /* PreviewView.swift */,
 			);
 			path = XcodeColorSense;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2069BE91CE9B6C70027D12E /* XcodeColorSense.swift in Sources */,
+				D2069BF11CE9BE270027D12E /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
