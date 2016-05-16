@@ -13,6 +13,7 @@ class XcodeColorSense: NSObject {
 
   var bundle: NSBundle
   lazy var center = NSNotificationCenter.defaultCenter()
+  var textView: NSTextView?
 
   // MARK: - Initialization
 
@@ -47,27 +48,42 @@ class XcodeColorSense: NSObject {
     initializeAndLog()
   }
 
-  // MARK: - Implementation
-
   func initialize() -> Bool {
-    guard let mainMenu = NSApp.mainMenu else { return false }
-    guard let item = mainMenu.itemWithTitle("Edit") else { return false }
-    guard let submenu = item.submenu else { return false }
-
-    let actionMenuItem = NSMenuItem(title:"Do Action", action:#selector(self.doMenuAction), keyEquivalent:"")
-    actionMenuItem.target = self
-
-    submenu.addItem(NSMenuItem.separatorItem())
-    submenu.addItem(actionMenuItem)
-
+    findTextView()
+    listenNotification()
     return true
   }
 
-  func doMenuAction() {
-    let error = NSError(domain: "Hello World!", code:42, userInfo:nil)
-    NSAlert(error: error).runModal()
+  func findTextView() {
+    guard let DVTSourceTextView = NSClassFromString("DVTSourceTextView") as? NSObject.Type,
+      firstResponder = NSApp.keyWindow?.firstResponder where firstResponder.isKindOfClass(DVTSourceTextView.self)
+      else { return }
+
+    textView = firstResponder as? NSTextView
   }
 
+  // MARK: - Notification
+  func listenNotification() {
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(handleSelectionChange(_:)), name: NSTextViewDidChangeSelectionNotification, object: nil)
+  }
 
+  func handleSelectionChange(note: NSNotification) {
+    guard let DVTSourceTextView = NSClassFromString("DVTSourceTextView") as? NSObject.Type,
+      object = note.object where object.isKindOfClass(DVTSourceTextView.self),
+      let textView = object as? NSTextView
+    else { return }
+
+    self.textView = textView
+
+    guard let range = textView.selectedRanges.first?.rangeValue,
+      string = textView.textStorage?.string
+    else { return }
+
+    let text = string as NSString
+    let lineRange = text.lineRangeForRange(range)
+    let line = text.substringWithRange(lineRange)
+
+      
+  }
 }
 

@@ -263,6 +263,7 @@
 				D2069BEF1CE9B6C70027D12E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
