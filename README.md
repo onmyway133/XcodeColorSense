@@ -7,6 +7,7 @@ An Xcode plugin that makes working with color easier. Inspired by [ColorSense-fo
 Features
 ==
 
+- Show color preview as you type or select
 - Works for `UIColor`, `NSColor`
 
 ![](Screenshots/XcodeColorSense.png)
