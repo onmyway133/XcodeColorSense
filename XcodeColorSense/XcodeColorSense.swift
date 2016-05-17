@@ -15,6 +15,9 @@ class XcodeColorSense: NSObject {
   lazy var center = NSNotificationCenter.defaultCenter()
   var textView: NSTextView?
   let previewView = PreviewView(frame: CGRect(origin: CGPointZero, size: CGSize(width: 60, height: 40)))
+  let matchers: [Matcher] = [
+    HexMatcher()
+  ]
 
   // MARK: - Initialization
 
@@ -77,26 +80,36 @@ class XcodeColorSense: NSObject {
     self.textView = textView
 
     guard let range = textView.selectedRanges.first?.rangeValue,
-      string = textView.textStorage?.string
+      let string = textView.textStorage?.string
     else { return }
 
     // Text
     let text = string as NSString
-    let selectedText = range.length > 0 ? text.substringWithRange(range) : ""
-    let line = text.substringWithRange(text.lineRangeForRange(range))
+    let selectedText = text.substringWithRange(range)
+    let lineRange = text.lineRangeForRange(range)
+    let line = text.substringWithRange(lineRange)
 
-    // Position
-    let rectInScreen = textView.firstRectForCharacterRange(range, actualRange: nil)
-    let rectInWindow = textView.window?.convertRectFromScreen(rectInScreen) ?? NSZeroRect
-    let rectInTextView = textView.convertRect(rectInWindow, fromView: nil)
+    // Match
+    var result: (color: NSColor, range: NSRange)? = nil
+    for matcher in matchers {
+      if let r = matcher.check(line, selectedText: selectedText) {
+        result = r
+        break
+      }
+    }
 
-    previewView.frame.origin = CGPoint(x: rectInTextView.origin.x,
-                                       y: rectInTextView.origin.y - previewView.frame.size.height * 2)
-
-    // Color
-    if Regex.validateHex(selectedText) {
-      previewView.color = NSColor.hex(selectedText)
+    if let result = result {
+      previewView.color = result.color
       textView.addSubview(previewView)
+
+      // Position
+      let foundRange = NSMakeRange(lineRange.location + result.range.location, result.range.length)
+      let rectInScreen = textView.firstRectForCharacterRange(foundRange, actualRange: nil)
+      let rectInWindow = textView.window?.convertRectFromScreen(rectInScreen) ?? NSZeroRect
+      let rectInTextView = textView.convertRect(rectInWindow, fromView: nil)
+
+      previewView.frame.origin = CGPoint(x: rectInTextView.origin.x,
+                                         y: rectInTextView.origin.y - previewView.frame.size.height * 2)
     } else {
       previewView.removeFromSuperview()
     }

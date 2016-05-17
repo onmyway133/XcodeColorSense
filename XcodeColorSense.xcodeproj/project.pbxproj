@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D2069BE71CE9B6C70027D12E /* XcodeColorSense.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = D2069BE61CE9B6C70027D12E /* XcodeColorSense.xcscheme */; };
-		D2069BE91CE9B6C70027D12E /* XcodeColorSense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */; };
 		D2069BF11CE9BE270027D12E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2069BF01CE9BE270027D12E /* PreviewView.swift */; };
-		D2AC0DB61CE9DFB2004DBA5D /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC0DB51CE9DFB2004DBA5D /* NSColor+Extensions.swift */; };
-		D2AC0DB81CE9E61D004DBA5D /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC0DB71CE9E61D004DBA5D /* Regex.swift */; };
+		D2F34E671CEB6A4500A36160 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E601CEB6A4500A36160 /* NSColor+Extensions.swift */; };
+		D2F34E681CEB6A4500A36160 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E611CEB6A4500A36160 /* String+Extensions.swift */; };
+		D2F34E691CEB6A4500A36160 /* HexMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E631CEB6A4500A36160 /* HexMatcher.swift */; };
+		D2F34E6A1CEB6A4500A36160 /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E641CEB6A4500A36160 /* Matcher.swift */; };
+		D2F34E6B1CEB6A4500A36160 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E651CEB6A4500A36160 /* Regex.swift */; };
+		D2F34E6E1CEB6A5B00A36160 /* XcodeColorSense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E6D1CEB6A5B00A36160 /* XcodeColorSense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D2069BE21CE9B6C70027D12E /* XcodeColorSense.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeColorSense.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2069BE61CE9B6C70027D12E /* XcodeColorSense.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = XcodeColorSense.xcscheme; path = XcodeColorSense.xcodeproj/xcshareddata/xcschemes/XcodeColorSense.xcscheme; sourceTree = SOURCE_ROOT; };
-		D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeColorSense.swift; sourceTree = "<group>"; };
 		D2069BEA1CE9B6C70027D12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2069BF01CE9BE270027D12E /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
-		D2AC0DB51CE9DFB2004DBA5D /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
-		D2AC0DB71CE9E61D004DBA5D /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		D2F34E601CEB6A4500A36160 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
+		D2F34E611CEB6A4500A36160 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D2F34E631CEB6A4500A36160 /* HexMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexMatcher.swift; sourceTree = "<group>"; };
+		D2F34E641CEB6A4500A36160 /* Matcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
+		D2F34E651CEB6A4500A36160 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		D2F34E6D1CEB6A5B00A36160 /* XcodeColorSense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeColorSense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -44,12 +50,12 @@
 		D2069BE41CE9B6C70027D12E /* XcodeColorSense */ = {
 			isa = PBXGroup;
 			children = (
-				D2069BE81CE9B6C70027D12E /* XcodeColorSense.swift */,
+				D2F34E6D1CEB6A5B00A36160 /* XcodeColorSense.swift */,
+				D2069BF01CE9BE270027D12E /* PreviewView.swift */,
+				D2F34E5F1CEB6A4500A36160 /* Extensions */,
+				D2F34E621CEB6A4500A36160 /* Matcher */,
 				D2069BEA1CE9B6C70027D12E /* Info.plist */,
 				D2069BE51CE9B6C70027D12E /* Supporting Files */,
-				D2069BF01CE9BE270027D12E /* PreviewView.swift */,
-				D2AC0DB51CE9DFB2004DBA5D /* NSColor+Extensions.swift */,
-				D2AC0DB71CE9E61D004DBA5D /* Regex.swift */,
 			);
 			path = XcodeColorSense;
 			sourceTree = "<group>";
@@ -60,6 +66,25 @@
 				D2069BE61CE9B6C70027D12E /* XcodeColorSense.xcscheme */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D2F34E5F1CEB6A4500A36160 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2F34E601CEB6A4500A36160 /* NSColor+Extensions.swift */,
+				D2F34E611CEB6A4500A36160 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2F34E621CEB6A4500A36160 /* Matcher */ = {
+			isa = PBXGroup;
+			children = (
+				D2F34E631CEB6A4500A36160 /* HexMatcher.swift */,
+				D2F34E641CEB6A4500A36160 /* Matcher.swift */,
+				D2F34E651CEB6A4500A36160 /* Regex.swift */,
+			);
+			path = Matcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,10 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2069BE91CE9B6C70027D12E /* XcodeColorSense.swift in Sources */,
-				D2AC0DB81CE9E61D004DBA5D /* Regex.swift in Sources */,
-				D2AC0DB61CE9DFB2004DBA5D /* NSColor+Extensions.swift in Sources */,
+				D2F34E6E1CEB6A5B00A36160 /* XcodeColorSense.swift in Sources */,
+				D2F34E691CEB6A4500A36160 /* HexMatcher.swift in Sources */,
+				D2F34E671CEB6A4500A36160 /* NSColor+Extensions.swift in Sources */,
+				D2F34E681CEB6A4500A36160 /* String+Extensions.swift in Sources */,
+				D2F34E6A1CEB6A4500A36160 /* Matcher.swift in Sources */,
 				D2069BF11CE9BE270027D12E /* PreviewView.swift in Sources */,
+				D2F34E6B1CEB6A4500A36160 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
