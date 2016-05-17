@@ -7,7 +7,24 @@ An Xcode plugin that makes working with color easier. Inspired by [ColorSense-fo
 Features
 ==
 
+- Works for `UIColor`, `NSColor`
+
 ![](Screenshots/XcodeColorSense.png)
+
+## Matchers
+
+- Hex Matcher
+- Red-Green-Blue-Alpha Matcher
+
+## Extensible
+
+Add your own color handler by conforming to `Matcher`
+
+```swift
+protocol Matcher {
+  func check(line: String, selectedText: String) -> (color: NSColor, range: NSRange)?
+}
+```
 
 Licence
 --
