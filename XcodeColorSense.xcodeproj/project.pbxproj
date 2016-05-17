@@ -15,6 +15,8 @@
 		D2F34E6A1CEB6A4500A36160 /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E641CEB6A4500A36160 /* Matcher.swift */; };
 		D2F34E6B1CEB6A4500A36160 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E651CEB6A4500A36160 /* Regex.swift */; };
 		D2F34E6E1CEB6A5B00A36160 /* XcodeColorSense.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E6D1CEB6A5B00A36160 /* XcodeColorSense.swift */; };
+		D2F34E711CEB748E00A36160 /* RGBAMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E701CEB748E00A36160 /* RGBAMatcher.swift */; };
+		D2F34E741CEB7F5D00A36160 /* PresetMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F34E731CEB7F5D00A36160 /* PresetMatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D2F34E641CEB6A4500A36160 /* Matcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
 		D2F34E651CEB6A4500A36160 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		D2F34E6D1CEB6A5B00A36160 /* XcodeColorSense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeColorSense.swift; sourceTree = "<group>"; };
+		D2F34E701CEB748E00A36160 /* RGBAMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAMatcher.swift; sourceTree = "<group>"; };
+		D2F34E731CEB7F5D00A36160 /* PresetMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetMatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -83,6 +87,8 @@
 				D2F34E631CEB6A4500A36160 /* HexMatcher.swift */,
 				D2F34E641CEB6A4500A36160 /* Matcher.swift */,
 				D2F34E651CEB6A4500A36160 /* Regex.swift */,
+				D2F34E701CEB748E00A36160 /* RGBAMatcher.swift */,
+				D2F34E731CEB7F5D00A36160 /* PresetMatcher.swift */,
 			);
 			path = Matcher;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 				D2F34E691CEB6A4500A36160 /* HexMatcher.swift in Sources */,
 				D2F34E671CEB6A4500A36160 /* NSColor+Extensions.swift in Sources */,
 				D2F34E681CEB6A4500A36160 /* String+Extensions.swift in Sources */,
+				D2F34E711CEB748E00A36160 /* RGBAMatcher.swift in Sources */,
+				D2F34E741CEB7F5D00A36160 /* PresetMatcher.swift in Sources */,
 				D2F34E6A1CEB6A4500A36160 /* Matcher.swift in Sources */,
 				D2069BF11CE9BE270027D12E /* PreviewView.swift in Sources */,
 				D2F34E6B1CEB6A4500A36160 /* Regex.swift in Sources */,

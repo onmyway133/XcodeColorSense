@@ -14,7 +14,8 @@ Features
 ## Matchers
 
 - Hex Matcher
-- Red-Green-Blue-Alpha Matcher
+- RGBA Matcher
+- Preset Matcher
 
 ## Extensible
 
