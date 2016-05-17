@@ -14,8 +14,22 @@ Features
 ## Matchers
 
 - Hex Matcher
+
+```swift
+let _ = NSColor.hex("#FFAABB")
+```
+
 - RGBA Matcher
+
+```swift
+let _ = UIColor(red: 1.0f, green: 240/255, blue: 0.8, alpha: 0.95)
+```
+
 - Preset Matcher
+
+```swift
+let _ = NSColor.redColor()
+```
 
 ## Extensible
 

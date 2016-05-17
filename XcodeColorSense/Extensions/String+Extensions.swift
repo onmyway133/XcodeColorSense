@@ -17,4 +17,12 @@ extension String {
   func replace(occurence: String, with: String) -> String {
     return stringByReplacingOccurrencesOfString(occurence, withString: with)
   }
+
+  func remove(occurrence: String) -> String {
+    return replace(occurrence, with: "")
+  }
+
+  func trim() -> String {
+    return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+  }
 }
