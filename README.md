@@ -10,7 +10,7 @@ Features
 - Show color preview as you type or select
 - Works for `UIColor`, `NSColor`
 
-![](Screenshots/XcodeColorSense.png)
+![](Screenshots/XcodeColorSense.gif)
 
 ## Matchers
 
