@@ -42,6 +42,17 @@ protocol Matcher {
 }
 ```
 
+## Installation
+
+### Manually
+
+- Build the project. The plugin will be in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`
+- Restart Xcode
+
+### Alcatraz
+
+- Available via http://alcatraz.io/
+
 Licence
 --
 This project is released under the MIT license. See LICENSE.md.
