@@ -18,6 +18,7 @@ Features
 
 ```swift
 let _ = NSColor.hex("#FFAABB")
+let _ = UIColor(hex: 0xFFAABB)
 ```
 
 - RGBA Matcher
